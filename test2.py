@@ -18,7 +18,7 @@ with st.sidebar:
     ver_gastos = st.sidebar.checkbox("Mostrar Gastos", value=True)
     
 
-st.title("Análise Financeira 📊")
+st.title("FinSight 📊")
 
 if uploaded_file is not None:
     if uploaded_file.name.endswith(".csv"):
