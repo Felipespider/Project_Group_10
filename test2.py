@@ -119,7 +119,7 @@ else:
 
         # -------- Distribuição por Categoria (Barra) -------- #
         st.subheader("Distribuição por Categoria 📊")
-        df_cat = df_filtrado.groupby("CATEGORIA:")["VALOR (R$):"].sum().reset_index()
+        df_cat = df_filtrado.groupby(["CATEGORIA:", "TIPO DE REGISTRO:"])["VALOR (R$):"].sum().reset_index()
         
         cores_personalizadas1 = {
         "Ganho": "#2ecc71",               # verde (lucro)
@@ -131,7 +131,7 @@ else:
             x="CATEGORIA:",
             y="VALOR (R$):",
             title="Total por Categoria",
-            color="CATEGORIA:",
+            color="TIPO DE REGISTRO:",
             color_discrete_map=cores_personalizadas1,
             text_auto=True
         )
@@ -150,7 +150,7 @@ else:
             names="CATEGORIA:",
             values="VALOR (R$):",
             title="Distribuição por Categoria",
-            color = "CATEGORIA:",
+            color = "TIPO DE REGISTRO:",
             color_discrete_map=cores_personalizadas2,
         )
         fig_pie.update_traces(textinfo="percent+label")
