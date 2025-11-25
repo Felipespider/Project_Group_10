@@ -40,6 +40,9 @@ gráficas detalhadas dos dados financeiros.
 - pandas
 - plotly
 ### Instalação
-import pandas as pd
-import plotly.express as px
-from datetime import datetime
+- import pandas as pd
+- import plotly.express as px
+- from datetime import datetime
+## Rodar
+- Com todas as dependências instaladas, digite no terminal "Streamlit run test2.py"
+- Aplicação rodada e pronta para testes ✅
